@@ -17,8 +17,6 @@ export default function Authentication () {
   const { setUserProfile } = useUserProfileStore();
 
 const handleLogin= (mobile:string)=>{
-  console.log(mobile)
-  // debugger;
   getUserData({
     url: "https://randomuser.me/api/?results=1&nat=us",
   });
@@ -32,15 +30,12 @@ const handleLogin= (mobile:string)=>{
     lazy: true,
     method: "get",
     onSuccess(data) {
-      console.log(data,"data")
       const result = data.data?.results
       result && result?.length > 0
         ? setUserProfile(result[0])
         : enqueueSnackbar("User not found with this creds", {
             variant: "error",
           });
-      console.log("here");
-      console.log(router)
       router.replace("/dashboard");
     },
     onError(error) {

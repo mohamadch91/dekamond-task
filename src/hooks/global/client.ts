@@ -19,11 +19,9 @@ export const client = axios.create(
 
 // client.interceptors.response.use(
 //   function (response) {
-//     console.log(response);
 //     return response;
 //   },
 //   function (error) {
-//     console.error("API Response Error:", error);
 //    return Promise.reject(error);
 //   }
 // );

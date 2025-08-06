@@ -43,7 +43,6 @@ const useApi = <ResponseType, FormattedDataType = ResponseType>(
     props?: ReCallProps<FormattedDataType>
   ): Promise<any> => {
     try {
-        console.log("started api call")
       setData({
         error: false,
         loading: true,

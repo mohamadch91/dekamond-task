@@ -59,7 +59,7 @@ const formik = useFormik({
             onClick={() => {
               handlelogin(formik.values.mobile);
             }}
-            color="outline"
+            color="primary"
             loading={loading}
             icon={"next"}
             text={"ورود"}
