@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useRef } from 'react';
 import styles from './auth.module.scss'
 import KButton from '@components/KButton';
 import KInput from '@components/KInput';
@@ -8,7 +8,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Mobile: FunctionComponent<MobileProps> = ({loading,handlelogin}) =>  {
-
+ const inputRef = useRef<HTMLInputElement>(null);
 const formik = useFormik({
   initialValues: {
     mobile: "",
@@ -19,7 +19,7 @@ const formik = useFormik({
   },
 });
   const handleMobileChange = (text: string) => {
-
+    console.log(text)
     formik.setFieldValue("mobile", text);
   };
 
@@ -37,12 +37,14 @@ const formik = useFormik({
         <div className={` row-auto w-full mt-4 `}>
           <KInput
             placeholder="شماره موبایل"
-            onChange={(value: string) => {
-              handleMobileChange(value)
+            onChange={() => {
+              handleMobileChange(inputRef?.current?.value || "")
+              
+             
             }}
+            ref={inputRef}
             desc="برای ورود  شماره تلفن همراه خود را وارد کنید."
             value={formik.values.mobile}
-            
             error={formik.errors.mobile}
             disable={false}
             required={true}
@@ -55,7 +57,11 @@ const formik = useFormik({
       <div className="card-bottom btns">
         <div className="k-btn row">
           <KButton
-            disable={formik.values.mobile=='' || !formik.values.mobile || !!formik.errors.mobile}
+            disable={
+              formik.values.mobile == "" ||
+              !formik.values.mobile ||
+              !!formik.errors.mobile
+            }
             onClick={() => {
               handlelogin(formik.values.mobile);
             }}

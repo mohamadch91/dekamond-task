@@ -1,5 +1,4 @@
 'use client';
-import { FunctionComponent,  useState } from "react";
 import styles from './auth.module.scss';
 import Mobile from "./mobile";
 import Image from "next/image";
@@ -9,12 +8,17 @@ import useApi from "@/hooks/global/useApi";
 import { enqueueSnackbar } from 'notistack'
 import useUserProfileStore from "@/store/user";
 import { useRouter } from "next/navigation";
+import { useEffect } from 'react';
+import { useStore } from 'zustand';
 
 
 export default function Authentication () {
 
    const router = useRouter();
   const { setUserProfile } = useUserProfileStore();
+  const IsAuthenticated = useStore(useUserProfileStore, (state) =>
+    state.isAuthenticated(state.userProfile)
+  );
 
 const handleLogin= (mobile:string)=>{
   getUserData({
@@ -44,6 +48,13 @@ const handleLogin= (mobile:string)=>{
     },
     
   });
+
+    useEffect(() => {
+      
+      if (IsAuthenticated && IsAuthenticated!==undefined) {
+        router.push("/dashboard");
+      }
+    }, [IsAuthenticated]);
  
  
 
