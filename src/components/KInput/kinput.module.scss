@@ -2,11 +2,12 @@
   width: 100%;
   position: relative!important;
   min-height: 90px;
+  max-width: 100%;
   display: flex;
   height: 36px;
   // padding: 6px var(--Radius-L, 16px);
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   align-self: stretch;
   &:not(.desc) {
@@ -48,11 +49,14 @@
     text-align: center;
     color: #ff0083;
   }
+  
   input,
   textarea {
     border: 1px solid #b9c2d5;
     width: 100%;
     max-width: 450px;
+ 
+
     z-index: 100;
     position: absolute!important;
     padding: 15px 16px 6px 16px;
@@ -71,6 +75,12 @@
     line-height: 200%; /* 32px */
     letter-spacing: -0.8px;
   }
+     @media (max-width: 740px) {
+      input{
+        // max-width: 300px;
+        width: 88vw;
+      }
+}
   input:focus-visible,
   textarea:focus-visible {
     box-shadow: none;
@@ -260,6 +270,7 @@
 
 @media (max-width: 340px) {
   .k-input {
+    max-width: 320px;
     .desc {
       // bottom: -25px;
       right: 20px;

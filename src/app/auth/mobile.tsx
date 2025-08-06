@@ -27,20 +27,22 @@ const formik = useFormik({
   return (
     <>
       <div className={styles["card-top"]}>
-        <div className={` row-auto ${styles["card-logo"]}`} onClick={() => {}}>
-          <Image alt="logo" src={require("@images/dekamond.webp")} />
+        <div className={` row ${styles["card-logo"]}`} onClick={() => {}}>
+          <Image
+            alt="logo"
+            src={require("@images/dekamond.webp")}
+            width={120}
+          />
         </div>
         <div className={`${styles["card-header"]} row`}>خوش‌آمدید</div>
         <div className={`${styles["card-alt"]} row`}>
           امنیت و آرامش در دستان شما
         </div>
-        <div className={` row-auto w-full mt-4 `}>
+        <div className={` row !mt-4 `}>
           <KInput
             placeholder="شماره موبایل"
             onChange={() => {
-              handleMobileChange(inputRef?.current?.value || "")
-              
-             
+              handleMobileChange(inputRef?.current?.value || "");
             }}
             ref={inputRef}
             desc="برای ورود  شماره تلفن همراه خود را وارد کنید."
@@ -54,8 +56,8 @@ const formik = useFormik({
           />
         </div>
       </div>
-      <div className="card-bottom btns">
-        <div className="k-btn row">
+      <div className={`${styles["card-bottom"]} ${styles.btns}`}>
+        <div className={`${styles["k-btn"]} row`}>
           <KButton
             disable={
               formik.values.mobile == "" ||

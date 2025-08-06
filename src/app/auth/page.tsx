@@ -62,9 +62,9 @@ const handleLogin= (mobile:string)=>{
     <section className={styles.authentication}>
       <div className={styles.auth}>
         <div className={styles["top-logo"]}>
-          <Image alt="logo" src={require("@images/dekamond.webp").default} />
+          <Image alt="logo" src={require("@images/dekamond.webp").default}  />
         </div>
-        <div className="image col-span-12 ">
+        <div className={`${styles.image} col-span-12 `}>
           <Image alt="login" src={require("@svg/login.svg").default} />
         </div>
         <div className={`${styles["auth-card"]} col-12 col-md-6`}>
