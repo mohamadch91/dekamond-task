@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: iransans;
+  src: url('../assets/fonts/iransans/IRANSansXFaNum-Black.woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: iransans;
+  src: url('../assets/fonts/iransans/IRANSansXFaNum-Bold.woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: iransans;
+  src: url('../assets/fonts/iransans/IRANSansXFaNum-Black.woff');
+  font-weight: 900;
+}
+@font-face {
+  font-family: iransans;
+  src: url('../assets/fonts/iransans/IRANSansXFaNum-Regular.woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: iransans;
+  src: url('../assets/fonts/iransans/IRANSansXFaNum-Light.woff');
+  font-weight: lighter;
+}
+
+body{
+      font-family: iransans !important;
+  background-color: #f5f5f5 !important;
+
+}

@@ -1,6 +1,6 @@
 import { UserData } from "@constants/api/user";
 
-export interface LoginData {
+export interface LoginResponse {
   results: UserData[];
   info: Info;
 }

@@ -1,0 +1,245 @@
+.k-button {
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  text-align: center;
+  background: transparent;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  border-radius: var(--Radius-L, 16px);
+
+  span {
+    text-align: center;
+    font-family: 'iransans'
+  }
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .next {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .back {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.l {
+    padding: 11px 24px 13px 24px;
+    gap: 8px;
+
+    .next {
+      width: 7px;
+      height: 12px;
+    }
+    .back {
+      width: 7px;
+      height: 12px;
+    }
+    @media (max-width: 768px) {
+      padding: 7px 16px 9px 16px;
+      gap: 8px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      .next {
+        width: 5px;
+        height: 9px;
+      }
+      .back {
+        width: 5px;
+        height: 9px;
+      }
+    }
+  }
+
+  &.m {
+    padding: 7px 16px 9px 16px;
+    gap: 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    .next {
+      width: 5px;
+      height: 9px;
+    }
+    .back {
+      width: 5px;
+      height: 9px;
+    }
+  }
+  &.s {
+    padding: 3px 12px 5px 12px;
+    gap: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    .next {
+      width: 4px;
+      height: 7px;
+    }
+    .back {
+      width: 4px;
+      height: 7px;
+    }
+  }
+
+  &.primary {
+    background: var(--Red-500-Brand, #ff0083);
+    color: white;
+    &.disable {
+      background: var(--Gray-200-Disable, #b9c2d5);
+    }
+    .next {
+      // background: url('../../assets/images/svg/next-white.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .back {
+      // background: url('../../assets/images/svg/next-white.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      transform: rotate(180deg);
+    }
+    .qrCode {
+      // background: url('../../assets/images/svg/qr-code.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      transform: rotate(180deg);
+    }
+  }
+  &.secondary {
+    // background: var(--Red-500-Brand, #80a5f5);
+    color: #80a5f5;
+    // color: white;
+    &.disable {
+      background: var(--Gray-200-Disable, #b9c2d5);
+    }
+    .next {
+      // background: url('../../assets/images/svg/next-blue.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .back {
+      // background: url('../../assets/images/svg/next-blue.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      transform: rotate(180deg);
+    }
+  }
+
+  &.outline {
+    border: 1px solid var(--Gray-500-Text-High-Emphesise, #1f2a43);
+    color: var(--Gray-500-Text-High-Emphesise, #1f2a43);
+    .next {
+      // background: url('../../assets/images/svg/next-dark-blue.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .back {
+      // background: url('../../assets/images/svg/next-dark-blue.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      transform: rotate(180deg);
+    }
+    &.disable {
+      border: 1px solid #eff2f7;
+      color: var(--Gray-500-Text-High-Emphesise, #c3cad9);
+      .next {
+        // background: url('../../assets/images/svg/next-gray.svg');
+        background-repeat: no-repeat;
+
+        background-size: cover;
+      }
+      .back {
+        // background: url('../../assets/images/svg/next-gray.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.tint {
+    background: var(--Red-100, #ffd9ec);
+    color: var(--Red-500-Brand, #ff0083);
+    .next {
+      // background: url('../../assets/images/svg/next-pink.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .back {
+      // background: url('../../assets/images/svg/next-pink.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      transform: rotate(180deg);
+    }
+    &.disable {
+      background: var(--Red-100, #fff0f7);
+      color: var(--Red-500-Brand, #ffa6d4);
+
+      .next {
+        // background: url('../../assets/images/svg/next-light-pink.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .back {
+        // background: url('../../assets/images/svg/next-light-pink.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.plain {
+    border: 1px solid #7b61ff;
+    color: var(--Gray-200-Disable, #80a5f5);
+
+    .next {
+      // background: url('../../assets/images/svg/next-blue.svg');
+      background-repeat: no-repeat;
+    }
+    .back {
+      // background: url('../../assets/images/svg/next-blue.svg');
+      background-repeat: no-repeat;
+
+      transform: rotate(180deg);
+    }
+
+    &.disable {
+      color: #b9c2d5;
+      border: none;
+      .next {
+        // background: url('../../assets/images/svg/next-gray.svg');
+        background-repeat: no-repeat;
+      }
+      .back {
+        // background: url('../../assets/images/svg/next-gray.svg');
+        background-repeat: no-repeat;
+
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

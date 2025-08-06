@@ -1,0 +1,481 @@
+.authentication {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  // height: auto;
+  .auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 142px;
+    // margin-top: 70px;
+    // margin-bottom: 250px;
+    position: relative;
+    .top-logo{
+      display: none;
+    }
+    .image {
+      display: flex;
+      justify-content: end;
+      // align-items: center;
+      // align-content: center;
+      img {
+        display: block;
+        margin: auto;
+        width: 450px;
+        height: 370px;
+      }
+    }
+
+    .auth-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .k-card {
+        display: flex;
+        width: 486px;
+        height: 700px;
+        padding: 64px 40px 40px 40px;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-end;
+        flex-shrink: 0;
+        border-radius: 24px;
+        border: 1px solid #c3cad9;
+        background: #fff;
+
+        /* Desktop */
+        box-shadow: 0px 15.582px 62.328px 0px rgba(0, 0, 0, 0.15);
+        .card-top {
+          .card-logo {
+            width: 100px;
+            height: 55px;
+            margin-bottom: 40px;
+          }
+          .card-header {
+            color: #1f2a43;
+
+            /* Title/bold-24 */
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .card-alt {
+            color: #1f2a43;
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 26px; /* 185.714% */
+            &.edit {
+              color: #7b89a7;
+              cursor: pointer;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline;
+            }
+          }
+        }
+        .card-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 7px;
+            span {
+              color: #1f2a43;
+              text-align: right;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 26px; /* 185.714% */
+            }
+            a {
+              color: #668ee3;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .login-cat {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    // z-index: 200;
+  }
+}
+
+.row > * {
+  padding-right: 0;
+}
+@media only screen and (max-height: 850px){
+.authentication{
+  .auth{
+    margin-top: 30px;
+    .auth-card{
+      .k-card{
+        width: 486px;
+        height: 650px;
+        padding: 64px 40px 40px 40px;
+      }
+    }
+  }
+}
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .authentication {
+  .auth {
+    margin: 50px;
+    margin-top: 0;
+    height: 100vh;
+    // margin-top: 60px;
+    // margin-bottom: 220px;
+
+    .image {
+      img {
+        display: block;
+        margin: auto;
+        width: 450px;
+        height: 370px;
+      }
+    }
+
+    .auth-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .k-card {
+        display: flex;
+        width: 486px;
+        height: 700px;
+        padding: 64px 40px 40px 40px;
+        flex-shrink: 0;
+
+        /* Desktop */
+      
+       
+      }
+    }
+  }
+
+  .login-cat {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    // z-index: 200;
+  }
+}
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .authentication {
+  // height: auto;
+  // max-width: max-content;
+  .auth {
+  min-width: max-content;
+   
+    margin: 40px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    .image {
+      img {
+        display: block;
+        margin: auto;
+        width: 300px;
+        height: 240px;
+      }
+    }
+
+    .auth-card {
+      
+      .k-card {
+        width: 420px;
+        height: 650px;
+        padding: 54px 30px 30px 30px;
+        
+
+        /* Desktop */
+       
+      }
+    }
+  }
+
+ 
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .authentication {
+  // height: auto;
+    justify-content: center;
+    align-items: center;
+
+   .auth {
+    width: 100%;
+    justify-content: center;
+    max-width: 768px;
+    margin-right: 40px;
+    // margin: 142px;
+    margin-top: -50px;
+    margin-bottom: 300px;
+ 
+
+    .image {
+      justify-content: center;
+      display: none
+     
+    }
+
+    .auth-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .k-card {
+        display: flex;
+        width: 420px;
+        height: 610px;
+        padding: 54px 30px 30px 30px;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-end;
+        flex-shrink: 0;
+        border-radius: 24px;
+        border: 1px solid #c3cad9;
+        background: #fff;
+
+        /* Desktop */
+        box-shadow: 0px 15.582px 62.328px 0px rgba(0, 0, 0, 0.15);
+        .card-top {
+          .card-logo {
+            width: 100px;
+            height: 55px;
+            margin-bottom: 40px;
+          }
+          .card-header {
+            color: #1f2a43;
+
+            /* Title/bold-24 */
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .card-alt {
+            color: #1f2a43;
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 26px; /* 185.714% */
+            &.edit {
+              color: #7b89a7;
+              cursor: pointer;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline;
+            }
+          }
+        }
+        .card-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 7px;
+            span {
+              color: #1f2a43;
+              text-align: right;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 26px; /* 185.714% */
+            }
+            a {
+              color: #668ee3;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline !important;
+            }
+          }
+        }
+      }
+    }
+  }
+   .login-cat {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    // z-index: 200;
+  }
+
+ 
+}
+}
+
+
+@media only screen and (max-width: 430px) {
+  .authentication {
+  // height: auto;
+    justify-content: center;
+    align-items: center;
+
+   .auth {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    max-width: 768px;
+    // min-height: 75vh;
+    // margin-right: 40px;
+    // margin: 142px;
+    // margin-top: 70px;
+    margin: 0;
+    margin-top: 4vh;
+    margin-bottom: 20px;
+ 
+
+    .image {
+      justify-content: center;
+      display: none
+     
+    }
+    .top-logo{
+      display: flex;
+      // margin-top: 4vh;
+      position: fixed;
+      top: 5vh;
+      img{
+        width: 100px;
+        height: 52px;
+      }
+    }
+    .auth-card {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      .k-card {
+        display: flex;
+        width: 100%;
+        height: 672px;
+        padding: 54px 30px 30px 30px;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-end;
+        flex-shrink: 0;
+        border-radius: 24px;
+        border: 1px solid #c3cad9;
+        background: #fff;
+
+        /* Desktop */
+        box-shadow: 0px 15.582px 62.328px 0px rgba(0, 0, 0, 0.15);
+        .card-top {
+          .card-logo {
+            width: 100px;
+            height: 55px;
+            margin-bottom: 40px;
+            display: none;
+          }
+          .card-header {
+            color: #1f2a43;
+
+            /* Title/bold-24 */
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .card-alt {
+            color: #1f2a43;
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 26px; /* 185.714% */
+            &.edit {
+              color: #7b89a7;
+              cursor: pointer;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline;
+            }
+          }
+        }
+        .card-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 7px;
+            span {
+              color: #1f2a43;
+              text-align: right;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 26px; /* 185.714% */
+            }
+            a {
+              color: #668ee3;
+              text-align: right;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 26px; /* 162.5% */
+              text-decoration-line: underline !important;
+            }
+          }
+        }
+      }
+    }
+  }
+   .login-cat {
+    display: none;
+  }
+
+ 
+}
+}

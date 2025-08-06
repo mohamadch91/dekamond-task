@@ -1,0 +1,269 @@
+.k-input {
+  width: 100%;
+  position: relative!important;
+  min-height: 90px;
+  display: flex;
+  height: 36px;
+  // padding: 6px var(--Radius-L, 16px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  &:not(.desc) {
+    &:not(.error) {
+      min-height: 60px;
+    }
+  }
+  &:not(.has-value) .place-holder {
+    font-size: 16px;
+    font-weight: 300;
+    z-index: 150;
+    position: absolute!important;
+    line-height: 32px;
+    letter-spacing: -0.05em;
+    text-align: right;
+    top: 15px;
+    right: 25px;
+    color: #1f2a43;
+    transition: ease-out 0.2s;
+  }
+  &.has-value .place-holder {
+    z-index: 150;
+    position: absolute;
+    letter-spacing: -0.05em;
+    text-align: right;
+    transition: ease-out 0.2s;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #7b89a7;
+    top: 2px;
+    right: 20px;
+  }
+
+  .required {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #ff0083;
+  }
+  input,
+  textarea {
+    border: 1px solid #b9c2d5;
+    width: 100%;
+    max-width: 450px;
+    z-index: 100;
+    position: absolute!important;
+    padding: 15px 16px 6px 16px;
+    gap: 20px;
+    border-radius: 16px;
+    min-height: 40px;
+    overflow: hidden;
+    color: var(--Gray-500-Text-High-Emphesise, #1f2a43);
+    text-align: right;
+    font-feature-settings: 'ss01' on;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 200%; /* 32px */
+    letter-spacing: -0.8px;
+  }
+  input:focus-visible,
+  textarea:focus-visible {
+    box-shadow: none;
+    outline: none;
+  }
+  input:focus + .place-holder,
+  textarea:focus + .place-holder {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #7b89a7;
+    top: 2px;
+    right: 20px;
+  }
+  .error-text {
+    color: var(--Red-500-Brand, #ff0083);
+    text-align: right;
+    font-feature-settings: 'ss01' on;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 200%; /* 22px */
+    letter-spacing: -0.55px;
+    z-index: 200;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    svg {
+      margin-left: 5px;
+    }
+  }
+  .desc {
+    color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+    text-align: right;
+    font-feature-settings: 'ss01' on;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 200%;
+    letter-spacing: -0.55px;
+    z-index: 200;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    svg {
+      margin-left: 5px;
+    }
+  }
+  .icon {
+    cursor: pointer;
+    img {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      z-index: 250;
+      left: 15px;
+      top: 23px;
+    }
+    &.password {
+      img {
+        width: 24px;
+        height: 24px;
+        left: 15px;
+        top: 20px;
+      }
+    }
+  }
+  .icon-close {
+    padding: 5px;
+    cursor: pointer;
+  }
+  .icon-close img {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    z-index: 1000;
+    left: 23px;
+    top: 24px;
+  }
+  .component-container {
+    position: absolute;
+    display: flex;
+    padding: 0.35rem 0px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    // height: 64px;
+    height: 56px;
+    z-index: 300;
+    color: var(--Gray-500-Text-High-Emphesise, #1f2a43);
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 200%; /* 32px */
+    letter-spacing: -0.8px;
+    left: 0.35rem;
+    top: 0.1rem;
+  }
+  &.has-value {
+    input,
+    textarea {
+      border: 1px solid var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+      background: var(--Gray-100-Background, #eff2f7);
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+      text-align: right;
+      font-feature-settings: 'ss01' on;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 200%; /* 32px */
+      letter-spacing: -0.8px;
+    }
+  }
+  &.has-after-icon.has-value {
+    input,
+    textarea {
+      background: transparent;
+      color: #1f2a43;
+    }
+  }
+  &.error {
+    input,
+    textarea {
+      border: 1px solid var(--Red-500-Brand, #ff0083);
+      background: var(--Red-100, #fff0f7);
+    }
+    input:focus + .place-holder,
+    textarea:focus + .place-holder {
+      color: var(--Red-500-Brand, #ff0083);
+      text-align: right;
+      font-feature-settings: 'ss01' on, 'liga' off, 'clig' off;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 200% */
+    }
+    &.has-value .place-holder {
+      color: var(--Red-500-Brand, #ff0083);
+      text-align: right;
+      font-feature-settings: 'ss01' on, 'liga' off, 'clig' off;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 200% */
+      top: 2px;
+      right: 20px;
+    }
+  }
+  &.disable {
+    input,
+    textarea {
+      border-radius: var(--Radius-L, 16px);
+      border: 1px solid var(--Gray-100-Background, #eff2f7);
+      background: var(--Gray-100-Background, #eff2f7);
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+    }
+    .place-holder {
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+    }
+    .required {
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+    }
+    input:focus + .place-holder,
+    textarea {
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+      text-align: right;
+      font-feature-settings: 'ss01' on, 'liga' off, 'clig' off;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 200% */
+    }
+    &.has-value .place-holder {
+      color: var(--Gray-300-Text-Low-Emphesise, #7b89a7);
+      text-align: right;
+      font-feature-settings: 'ss01' on, 'liga' off, 'clig' off;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 200% */
+      top: 2px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .k-input {
+    .desc {
+      // bottom: -25px;
+      right: 20px;
+      font-size: 10px;
+    }
+  }
+}
