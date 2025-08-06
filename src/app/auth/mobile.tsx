@@ -57,7 +57,7 @@ const formik = useFormik({
           <KButton
             disable={formik.values.mobile=='' || !formik.values.mobile || !!formik.errors.mobile}
             onClick={() => {
-              handlelogin();
+              handlelogin(formik.values.mobile);
             }}
             color="outline"
             loading={loading}

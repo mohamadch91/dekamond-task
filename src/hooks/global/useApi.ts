@@ -13,7 +13,7 @@ const useApi = <ResponseType, FormattedDataType = ResponseType>(
 ) => {
   const {
     method = "get",
-    url = "",
+    url="",
     headers,
     payload,
     initialData,
@@ -43,26 +43,28 @@ const useApi = <ResponseType, FormattedDataType = ResponseType>(
     props?: ReCallProps<FormattedDataType>
   ): Promise<any> => {
     try {
+        console.log("started api call")
       setData({
         error: false,
         loading: true,
       });
       const response = (await api[method]({
         url:
-          props?.url || url ,
+          props?.url || url  ,
         payload: props?.payload || payload,
         config: {
           headers: {
-            "Accept-Language": "fa",
+            // "Accept-Language": "fa",
             ...headers,
           },
           baseURL,
           responseType,
         },
       })) as any as ApiOkResponse<ResponseType>;
+ 
 
       const formattedData = dataFormatter(
-        response.data as ResponseType
+        response as ResponseType
       ) as FormattedDataType;
       setData({
         loading: false,

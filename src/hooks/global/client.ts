@@ -2,37 +2,31 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable func-names */
 import axios from "axios";
-import { enqueueSnackbar } from "notistack";
-
-import { ErrorTypes } from "./type";
-
-
-
-
-
-
-
-export const client = axios.create({
+export const client = axios.create(
+//     {
   
-  timeoutErrorMessage: "TIMEOUT_ERROR",
-  timeout: 60000,
-});
-
-client.interceptors.request.use(
-
-  function (error) {
-    return Promise.reject(error);
-  }
+//   timeoutErrorMessage: "TIMEOUT_ERROR",
+//   timeout: 60000,
+// }
 );
 
-client.interceptors.response.use(
-  function (response) {
-    return response;
-  },
-  function (error) {
-   return error
-  }
-);
+// client.interceptors.request.use(
+
+//   function (error) {
+//     return Promise.reject(error);
+//   }
+// );
+
+// client.interceptors.response.use(
+//   function (response) {
+//     console.log(response);
+//     return response;
+//   },
+//   function (error) {
+//     console.error("API Response Error:", error);
+//    return Promise.reject(error);
+//   }
+// );
 
 export type ApiResponseType =
   | "arraybuffer"

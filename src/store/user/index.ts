@@ -5,7 +5,7 @@ interface UserProfileStore {
   userProfile: Partial<UserData> | null;
   setUserProfile: (userProfile: Partial<UserData>) => void;
   clearUserProfile: () => void;
-  isAuthenticated: (userProfile: Partial<UserData>) => boolean;
+  isAuthenticated: (userProfile: Partial<UserData> | null) => boolean;
 }
 
 const useUserProfileStore = create<UserProfileStore>()(
@@ -16,8 +16,8 @@ const useUserProfileStore = create<UserProfileStore>()(
       clearUserProfile: () => {
         set({ userProfile: null });
       },
-      isAuthenticated: (userProfile: Partial<UserData>) => {
-        if (!localStorage.getItem("userProfile") && !userProfile) {
+      isAuthenticated: (userProfile: Partial<UserData> | null) => {
+        if ( !userProfile?.name) {
           return false;
         }
         return true;
